@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+}
+
+//https://stackoverflow.com/questions/10797632/simulate-background-sizecover-on-video-or-img
+
+.landing {
+    &-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    &-video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        // @media screen and (max-width: 1350px) {
+        //     width: 114vw;
+        //     transform: translateX(-7vw);
+        // }
+        // @media screen and (max-width: 1000px) {
+        //     width: 140vw;
+        //     transform: translateX(-20vw);
+        // }
+        // @media screen and (max-width: 850px) {
+        //     width: 160vw;
+        //     transform: translateX(-30vw);
+        // }
+        // @media screen and (max-width: 650px) {
+        //     width: 200vw;
+        //     transform: translateX(-50vw);
+        // }
+        // @media screen and (max-width: 500px) {
+        //     width: 270vw;
+        //     transform: translateX(-85vw);
+        // }
+    }
+
+    &-marker {
+        background: red;
+        width: 10px;
+        height: 10px;
+    }
+
+    &-display {
+        position: absolute;
+        z-index: 1;
+        background: red;
+        width: 177.77777778vh;
+        min-width: 100%;
+        height: 100%;
+        min-height: 56.25vw;
+        // position: absolute;
+        // z-index: 1;
+        // top: 50%;
+        // left: 50%;
+        // width: 19%;
+        // height: 25%;
+        // transform: translate(-60%, -82%);
+        // animation: neon 1.5s ease-in-out infinite alternate;
+        // @media screen and (max-width: 1350px) {
+        //     width: 21%;
+        // }
+        // @media screen and (max-width: 1000px) {
+        //     width: 26%;
+        // }
+        // @media screen and (max-width: 850px) {
+        //     width: 30%;
+        // }
+        // @media screen and (max-width: 650px) {
+        //     width: 37%;
+        // }
+        // @media screen and (max-width: 500px) {
+        //     width: 50%;
+        // }
+    }
+}
+@-webkit-keyframes neon {
+    from {
+        //brighter
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff, inset 0 0 10px #fff, inset 0 0 20px #fff, inset 0 0 30px #fff, inset 0 0 40px #fff, inset 0 0 70px #fff, inset 0 0 80px #fff, inset 0 0 100px #fff, inset 0 0 150px #fff;
+        background: rgba(255, 255, 255, .8);
+    }
+
+    to {
+        //darker
+        box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff, inset 0 0 5px #fff, inset 0 0 10px #fff, inset 0 0 15px #fff, inset 0 0 20px #fff, inset 0 0 35px #fff, inset 0 0 40px #fff, inset 0 0 50px #fff, inset 0 0 75px #fff;
+        background: rgba(255, 255, 255, .5);
+    }
+}
